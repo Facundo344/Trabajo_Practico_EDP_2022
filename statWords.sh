@@ -10,7 +10,6 @@ NRO_LETRAS= wc -c sed 's/[^a-zA-Z]//g' Text.txt
 PROMEDIO_LONGITUD= [$NRO_PALABRAS / $NRO_LETRAS]
 
 
-
 echo "La palabra más larga es $PALABRA_ML
 La palabra más corta es $PALABRA_MC
 El promedio de longitud por palabra es de $PROMEDIO_LONGITUD letras"
