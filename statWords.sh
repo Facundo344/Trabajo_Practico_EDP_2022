@@ -1,9 +1,9 @@
 #!/bin/bash
 
 function word_stats {
-sed 's/\b /\n/g' Text.txt | sort | uniq | awk '{print length, $0}' | sort -nr | PALABRA_ML= head -n 1
+sed -e 's/[[:punct:]]*//g;s/[[:space:]]\+/\n/g' Text.txt | sort | uniq | awk '{print length, $0}' | sort -nr | PALABRA_ML= head -n 1
 
-sed 's/\b /\n/g' Text.txt | sort | uniq | awk '{print length, $0}' | sort -nr | PALABRA_MC = tail -n 1
+sed -e 's/[[:punct:]]*//g;s/[[:space:]]\+/\n/g' Text.txt | sort | uniq | awk '{print length, $0}' | sort -n | PALABRA_MC = head -n 1
 
 NRO_PALABRAS= wc -w Text.txt
 NRO_LETRAS= wc -c sed 's/[^a-zA-Z]//g' Text.txt
