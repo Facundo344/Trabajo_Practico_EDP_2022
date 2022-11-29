@@ -1,16 +1,17 @@
 #!/bin/bash
 
 function word_stats {
-sed -e 's/[[:punct:]]*//g;s/[[:space:]]\+/\n/g' Text.txt | sort | uniq | awk '{print length, $0}' | sort -nr | PALABRA_ML= head -n 1
+PALABRA_ML=$(sed -e 's/[[:punct:]]*//g;s/[[:space:]]\+/\n/g' Text.txt | sort | uniq | awk '{print length, $0}' | sort -nr | awk '{print $2}' | head -n 1)
+PALABRA_MC=$(sed -e 's/[[:punct:]]*//g;s/[[:space:]]\+/\n/g' Text.txt | sort | uniq | sed '/^$/d' | awk '{print length, $0}' | sort -n | awk '{print $2}' | head -n 1)
 
-sed -e 's/[[:punct:]]*//g;s/[[:space:]]\+/\n/g' Text.txt | sort | uniq | awk '{print length, $0}' | sort -n | PALABRA_MC = head -n 1
+NRO_PALABRAS=$(wc -w | awk '{print $1}')
+NRO_LETRAS=$(sed -e 's/[[:punct:]]*//g' Text.txt | wc -c)
 
-NRO_PALABRAS= wc -w Text.txt
-NRO_LETRAS= wc -c sed 's/[^a-zA-Z]//g' Text.txt
-PROMEDIO_LONGITUD= [$NRO_PALABRAS / $NRO_LETRAS]
-
+PROMEDIO_LONGITUD=$(($NRO_LETRAS/$NRO_PALABRAS))
 
 echo "La palabra más larga es $PALABRA_ML
 La palabra más corta es $PALABRA_MC
 El promedio de longitud por palabra es de $PROMEDIO_LONGITUD letras"
 }
+
+word_stats
