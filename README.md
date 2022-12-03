@@ -13,4 +13,4 @@ Se presentarán 6 opciones marcadas con números del 1 al 6.
 Si se presiona un número del 1 al 5 va a ejecutarse el script correspondiente a dicho número.
 Finalmente, si se inserta el número 6, la aplicación colapsará.
 
-"-" Facundo Bartolotta
+-\ Facundo Bartolotta
