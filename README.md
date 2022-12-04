@@ -6,7 +6,7 @@ Dejando de lado la key para acceder a este repositorio, todo lo se necesita para
 Teniendo en cuenta que docker está instalado en el dispositivo en el que la app va a correr, 
 todo lo que se necesita es correr este comando:
 
-docker run -it facubarto/tp_edp_2022:latest
+$ docker run -it facubarto/tp_edp_2022:latest
 
 Al correrlo en la terminal va a ejecutar el script menu.sh y va a esperar a que le respondan.
 
