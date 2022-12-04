@@ -4,7 +4,7 @@ Mi Trabajo Final para la Materia Entorno de Programación - Dic2022
 Dejando de lado la key para acceder a este repositorio, todo lo se necesita para correr esta aplicación está acá:
 
 Teniendo en cuenta que docker está instalado en el dispositivo en el que la app va a correr, 
-todo lo que se necesita es hacer un pull de todos los contenidos de este repo y correr este comando:
+todo lo que se necesita es correr este comando:
 
 docker run -it facubarto/tp_edp_2022:latest
 
